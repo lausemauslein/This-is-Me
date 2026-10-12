@@ -1,0 +1,75 @@
+body {
+  display: flex;
+  min-height: 90vh;
+  margin:0;
+  background-color: #e6e6fa;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.butterfly {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.main{
+  display: flex;
+  flex: 0 0 0 auto;
+}
+.np{
+  z-index: 50;
+  font-family: 'Gravitas One', Helvetica, sans-serif;
+  font-size: 55px;
+  padding:20px;
+  margin:0;
+  background-color:rgb(228, 228, 250);
+  border: none;
+  color: rgb(195, 174, 214);
+  border: 4px solid rgb(195, 174, 214);
+  border-radius: 80px;
+  margin: 0;
+  opacity: 1;
+  transition: opacity 0.15s, padding 0.15s;
+} 
+
+.np:hover{
+  z-index: 50;
+  opacity: 80%;
+  padding: 25px;
+  cursor: pointer;
+}
+
+.np:active {
+  z-index: 50;
+  opacity: 0.7;
+}
+.butterfly:has(.np:hover) .FLY {
+  transform: translate(400px, -240px) rotate(25deg);
+}
+
+.butterfly:has(.np:hover) .Fly2 {
+  transform: translate(-400px, 140px) rotate(-25deg);
+}
+
+.FLY{
+  flex: 0 0 0 auto;
+  position: relative;
+  z-index: 100;
+  height: 130px;
+  rotate: 20deg;
+  padding: 0 15px 30px 0;
+  margin:none;
+  transition: transform 3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.Fly2{
+  flex: 0 0 0 auto;
+  height: 130px;
+  z-index: 100;
+  rotate: 0deg;
+  margin: none;  
+  padding: 0 0 60px 0;
+  transition: transform 3s cubic-bezier(0.445, 0.03, 0.515, 0.955);
+  
+}

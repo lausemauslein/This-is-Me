@@ -1,0 +1,38 @@
+body{
+  background-color: lavender;
+}
+
+.grid{
+  display: grid;
+  grid-template-areas: 
+  H1 L1 L2 L3 H3
+  S Q1 FF Q3 WC
+  A R1 N R2 WC
+  H2 St St St H4;
+}
+
+.Hobby1{grid-area:H1 ;}
+.Story{grid-area:S ;}
+.Hobby2{grid-area:H2 ;}
+
+.Lang1{grid-area: L1;}
+.Quote1{grid-area: Q1;}
+.Roblox1{grid-area: R1;}
+.Quote2{grid-area: Q2;}
+.sth{grid-area: St;}
+
+.Lang2{grid-area: L2;}
+.FavFood{grid-area: FF;}
+.Name{grid-area: N;}
+.FavAnimal{grid-area: FA;}
+.sth{grid-area: St;}
+
+.Lang3{grid-area: L3;}
+.Quote3{grid-area: Q3;}
+.Roblox2{grid-area: R2;}
+.Quote4{grid-area: Q4;}
+.sth{grid-area: St;}
+
+.Hobby3{grid-area: H3;}
+.WhyCode{grid-area: WC;}
+.Hobby4{grid-area: H4;}
