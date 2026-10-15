@@ -79,7 +79,8 @@
 
 .main-body{
   background-color: lavender;
-  font-family: Bagel Fat One, Arial;
+  font-family:Abril Fatface,Arial;
+  /*font-family: Bagel Fat One, Arial;*/
   font-size: 30px;
 }
 
@@ -87,38 +88,41 @@
   display: grid;
   grid-template-areas: 
   'H1 L1 L2 L3 H3'
-  'S Q1 FF Q3 WC'
-  'S R1 N R2 WC'
-  'S Q2 FA Q4 WC'
-  'H2 St St St H4';
+  'PL Q1 St Q3 WC'
+  'PL R1 N R2 WC'
+  'PL Q2 FA Q4 WC'
+  'H2 FF FF FF H4';
+  text-align: center;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
 }
 
-.Hobby1{grid-area: H1;}
-.Story{grid-area:S;}
-.Hobby2{grid-area:H2 ;}
-
-.Lang1{grid-area: L1;}
-.Quote1{grid-area: Q1;}
-.Roblox1{grid-area: R1;}
-.Quote2{grid-area: Q2;}
-.sth{grid-area: St;}
-
-.Lang2{grid-area: L2;}
-.FavFood{grid-area: FF;}
+.Hobby1{grid-area: H1; border: 1px solid red;}
+.Playlist{grid-area:PL;border: 1px solid red;}
+.Hobby2{grid-area:H2 ;border: 1px solid red;}
+.Lang1{grid-area: L1;border: 1px solid red;}
+.Quote1{grid-area: Q1;border: 1px solid red;}
+.Roblox1{grid-area: R1;border: 1px solid red;}
+.Quote2{grid-area: Q2;border: 1px solid red;}
+.Lang2{grid-area: L2;border: 1px solid red;}
+.FavFood{grid-area: FF;border: 1px solid red;}
 .Name{
   grid-area: N;
-  font-size: 50px;
+  font-size: 60px;
   color: purple;
+  border: 1px solid red;
+  padding: 5px 5px 5px 5px;
 }
-.FavAnimal{grid-area: FA;}
-.sth{grid-area: St;}
+.sth{grid-area: St;border: 1px solid red;}
+.FavAnimal{grid-area: FA;border: 1px solid red;}
+.Lang3{grid-area: L3; border: 1px solid red;}
+.Quote3{grid-area: Q3; border: 1px solid red;}
+.Roblox2{grid-area: R2;border: 1px solid red;}
+.Quote4{grid-area: Q4;border: 1px solid red; color: rgb(1, 104, 201);}
+.Hobby3{grid-area: H3;border: 1px solid red;}
+.WhyCode{grid-area: WC;border: 1px solid red;}
+.Hobby4{grid-area: H4;border: 1px solid red;}
 
-.Lang3{grid-area: L3;}
-.Quote3{grid-area: Q3;}
-.Roblox2{grid-area: R2;}
-.Quote4{grid-area: Q4;}
-.sth{grid-area: St;}
-
-.Hobby3{grid-area: H3;}
-.WhyCode{grid-area: WC;}
-.Hobby4{grid-area: H4;}
+.italic{
+  font-size: 40px;
+}
