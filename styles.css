@@ -126,3 +126,24 @@
 .italic{
   font-size: 40px;
 }
+
+.Lang1,.Lang2,.Lang3{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.US-UK{
+  width: 85%;
+}
+.Austria{
+  width: 100%;
+}
+.Sverige{
+  width: 80%;
+}
+
+.Lang1Text,.Lang2Text,.Lang3Text{
+  padding-top: 10px;
+  position: absolute;
+}
+
