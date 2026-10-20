@@ -78,7 +78,7 @@
 /*Main Page*/
 
 .main-body{
-  background-color: lavender;
+  background: linear-gradient(lavender, plum) ;
   font-family:Abril Fatface,Arial;
   /*font-family: Bagel Fat One, Arial;*/
   font-size: 30px;
@@ -88,7 +88,7 @@
   justify-content: center;
   display: grid;
   grid-template-areas: 
-  'H1 L1 L2 L3 H3'
+  'H1 L L L H3'
   'PL Q1 St Q3 WC'
   'PL R1 N R2 WC'
   'PL Q2 FA Q4 WC'
@@ -101,11 +101,9 @@
 .Hobby1{grid-area: H1; border: 1px solid red;}
 .Playlist{grid-area:PL;border: 1px solid red;}
 .Hobby2{grid-area:H2 ;border: 1px solid red;}
-.Lang1{grid-area: L1;border: 1px solid red;}
 .Quote1{grid-area: Q1;border: 1px solid red;}
 .Roblox1{grid-area: R1;border: 1px solid red;}
 .Quote2{grid-area: Q2;border: 1px solid red;}
-.Lang2{grid-area: L2;border: 1px solid red;}
 .FavFood{grid-area: FF;border: 1px solid red;}
 .Name{
   grid-area: N;
@@ -116,7 +114,14 @@
 }
 .sth{grid-area: St;border: 1px solid red;}
 .FavAnimal{grid-area: FA;border: 1px solid red;}
-.Lang3{grid-area: L3; border: 1px solid red;}
+.languages{
+  grid-area: L; border: 1px solid red; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  flex: 1fr 1fr 1fr;
+  position: relative;
+}
 .Quote3{grid-area: Q3; border: 1px solid red;}
 .Roblox2{grid-area: R2;border: 1px solid red;}
 .Quote4{grid-area: Q4;border: 1px solid red; color: rgb(1, 104, 201);}
@@ -129,22 +134,31 @@
 }
 
 .Lang1,.Lang2,.Lang3{
-  place-items: center;  
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
 }
 .US-UK,
 .Austria,
 .Sverige{
-  width: 30vh;
-  position: relative;
+  width: 100%;
+  max-width: 30vh;
   z-index: 100;
 }
 
 .Lang1Text,.Lang2Text,.Lang3Text{
-  padding-top: 10px;
   position: absolute;
   z-index: 200;
-  text-align: center;
-  place-items: center;
+  margin-top: 7vh;
+  margin-bottom: 8vh;
+  margin-left: -1.5vh;
+
+}
+.Lang1Text{
+  background-color: white;
+  padding: 5px 5px 5px 5px;
 }
 
 .Me1,.Me2{
@@ -152,5 +166,8 @@
 }
 
 .PlaylistSongs{
-  width: 50vh;
+  width: 40vh;
+  overflow: none;
+  margin: 0 0 0 0;
+  padding-top: 2vh;
 }
