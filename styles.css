@@ -85,6 +85,7 @@
 }
 
 .grid{
+  justify-content: center;
   display: grid;
   grid-template-areas: 
   'H1 L1 L2 L3 H3'
@@ -128,22 +129,28 @@
 }
 
 .Lang1,.Lang2,.Lang3{
-  position: relative;
-  align-items: center;
-  justify-content: center;
+  place-items: center;  
 }
-.US-UK{
-  width: 85%;
-}
-.Austria{
-  width: 100%;
-}
+.US-UK,
+.Austria,
 .Sverige{
-  width: 80%;
+  width: 30vh;
+  position: relative;
+  z-index: 100;
 }
 
 .Lang1Text,.Lang2Text,.Lang3Text{
   padding-top: 10px;
   position: absolute;
+  z-index: 200;
+  text-align: center;
+  place-items: center;
 }
 
+.Me1,.Me2{
+  height: 40vh;
+}
+
+.PlaylistSongs{
+  width: 50vh;
+}
