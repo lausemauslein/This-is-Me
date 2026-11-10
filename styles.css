@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 /* Page 1*/
 .index-body {
   display: flex;
@@ -76,12 +81,20 @@
 }
 
 /*Main Page*/
+:root{
+--primary:lavender;
+--secondary:plum;
+--dark:black;
+--light:white;
+
+}
 
 .main-body{
   background: linear-gradient(lavender, plum) ;
   font-family:Abril Fatface,Arial;
   /*font-family: Bagel Fat One, Arial;*/
   font-size: 30px;
+  min-height: 100vh;
 }
 
 .grid{
@@ -98,36 +111,40 @@
   margin: 0 0 0 0;
 }
 
-.Hobby1{grid-area: H1; border: 1px solid red;}
-.Playlist{grid-area:PL;border: 1px solid red;}
-.Hobby2{grid-area:H2 ;border: 1px solid red;}
-.Quote1{grid-area: Q1;border: 1px solid red;}
-.Roblox1{grid-area: R1;border: 1px solid red;}
-.Quote2{grid-area: Q2;border: 1px solid red;}
-.FavFood{grid-area: FF;border: 1px solid red;}
+/*.Hobby1{grid-area: H1;}*/r
+.Playlist{grid-area:PL;}
+.Hobby2{grid-area:H2 ;}
+.Quote1{grid-area: Q1;}
+.Roblox1{grid-area: R1;}
+.Quote2{grid-area: Q2;}
+.FavFood{grid-area: FF;}
 .Name{
   grid-area: N;
   font-size: 60px;
   color: purple;
-  border: 1px solid red;
+  
   padding: 5px 5px 5px 5px;
 }
-.sth{grid-area: St;border: 1px solid red;}
-.FavAnimal{grid-area: FA;border: 1px solid red;}
+.sth{grid-area: St;}
+.FavAnimal{grid-area: FA;}
 .languages{
-  grid-area: L; border: 1px solid red; 
+  grid-area: L;  
   display: flex; 
   justify-content: center;
   align-items: center;
   flex: 1fr 1fr 1fr;
   position: relative;
 }
-.Quote3{grid-area: Q3; border: 1px solid red;}
-.Roblox2{grid-area: R2;border: 1px solid red;}
-.Quote4{grid-area: Q4;border: 1px solid red; color: rgb(1, 104, 201);}
-.Hobby3{grid-area: H3;border: 1px solid red;}
-.WhyCode{grid-area: WC;border: 1px solid red;}
-.Hobby4{grid-area: H4;border: 1px solid red;}
+.Quote3{grid-area: Q3; }
+.Roblox2{grid-area: R2;}
+.Quote4{grid-area: Q4; color: rgb(1, 104, 201);}
+.Hobby3{grid-area: H3;}
+.WhyCode{
+  grid-area: WC;
+  align-items: center;
+  line-height: 8vh;
+}
+.Hobby4{grid-area: H4;}
 
 .italic{
   font-size: 40px;
@@ -143,9 +160,11 @@
 .US-UK,
 .Austria,
 .Sverige{
-  width: 100%;
-  max-width: 30vh;
-  z-index: 100;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+  height: 100%;
+  max-width: 100%;
+  padding-right: .5vh;
 }
 
 .Lang1Text,.Lang2Text,.Lang3Text{
@@ -162,7 +181,9 @@
 }
 
 .Me1,.Me2{
-  height: 40vh;
+  aspect-ratio: 2/3;
+  object-fit: contain;
+  max-height: 50vh;
 }
 
 .PlaylistSongs{
@@ -170,4 +191,117 @@
   overflow: none;
   margin: 0 0 0 0;
   padding-top: 2vh;
+}
+
+
+.design{
+  position: absolute;
+  padding-top: 23vh;
+  padding-left: 16.5vh;
+  z-index: 100;
+  font-size: 25px;
+}
+
+.designIMG{
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  max-height: 50vh;
+  position: relative;
+  z-index: 90;
+}
+
+.Why{
+  font-size: 5vh;
+  color: black;
+  text-shadow: 0px 1px 10px darkorchid
+}
+
+.Coding{
+  height: 30vh;
+}
+
+
+.Crochet {
+  display: block;
+  height: 30vh;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  background-color: #FFF;
+  border: 5px solid #FFF;
+  object-fit: cover;
+}
+
+
+ /*card flipping thingy desing*/
+.card__inner{
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card__inner.is-flipped{
+  transform: rotateY(180deg);
+}
+
+.card__face{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card__face--front{
+  background: linear-gradient(to botttom right, var(--primary), var(--secondary));
+}
+
+.card__face--front h2 {
+  color: black;
+  font-size: 5vh;
+}
+
+.card__face--back{
+  background-color: var(--light);
+  transform: rotateY(180deg);
+}
+
+.card__content{
+  width: 100%;
+  height: 100%;
+}
+
+.card__header {
+  position: relative;
+  padding: 30px 30px 40px;
+}
+
+.card__header:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
+  z-index: -1;
+  border-radius: 0px 0px 50% 0px;
+}
+
+
+
+.card__body{
+  padding: 30px;
+}
+
+.card__body p {
+  color: var(--dark);
+  font-size: 18px;
+  line-height: 1.4;
 }
