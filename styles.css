@@ -80,28 +80,24 @@
   
 }
 
+
+
 /*Main Page*/
 :root{
 --primary:lavender;
 --secondary:plum;
 --dark:black;
 --light: rgb(255, 253, 248);
-
+--gradient: rgb(206, 151, 243);
 }
 
 .main-body{
-  background: linear-gradient(lavender, plum) ;
+  background: linear-gradient(var(--primary), var(--secondary)) ;
   font-family: "Capriola", sans-serif;
   font-size: 30px;
-  min-height: 100vh;
   padding: 10vh;
 }
 
-.Name{
-  font-size: 60px;
-  color: purple;
-  padding: 5px 5px 5px 5px;
-}
 
 .WhyCode{
   align-items: center;
@@ -132,7 +128,7 @@
   height: 30vh;
 }
 
-.Crochet, .designIMG {
+.Crochet, .designIMG, .Turtle {
   display: block;
   height: 30vh;
   border-radius: 50%;
@@ -189,6 +185,18 @@
   padding: 2vh;
 }
 
+.card__face--back h2 {
+  color: black;
+  font-size: 5vh;
+  text-align: center;
+  margin-top: 25vh;
+  background-color: none;
+  z-index: 20;
+  margin: 0;
+
+}
+
+
 .card__header:after {
   content: '';
   display: block;
@@ -225,33 +233,41 @@
   line-height: 1.4;
 }
 
-.Lang1,.Lang2,.Lang3{
-  width: fit-content;
-  margin: 0 auto;
-}
-
-.Lang1Text,.Lang2Text,.Lang3Text{
-  position: absolute;
-  z-index: 200;
-  margin-top: 7vh;
-  margin-bottom: 8vh;
-  margin-left: -1.5vh;
-
-}
 .Lang1Text{
   background-color: white;
   padding: 5px;
 }
 
+.Lang1 .card__header,.Lang2 .card__header,.Lang3 .card__header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  padding: 2vh;
+  height: 25vh;
+}
+
+
 .US-UK,
 .Austria,
 .Sverige{
-  aspect-ratio: 2/1;
-  object-fit: cover;
-  height: 100%;
-  max-width: 100%;
-  padding-right: .5vh;
+  height: 25vh;
+  padding: .5vh;
   border-radius: 0px 0px 40% 0px;
+  position: absolute;
+  z-index: 10;
+}
+
+.Lang3Text{
+  padding-bottom: 1.2vh;
+}
+
+.grid{
+  display: grid;
+  gap: 2vh;
+  justify-items: center;
+  align-items: center;
 }
 
 @media (max-width: 750px){
@@ -270,4 +286,35 @@
   .grid{
     grid-template-columns: 1fr 1fr;
   }
+}
+
+@media (min-width: 1900px){
+  .grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+
+.box {
+  width:50vh;
+  aspect-ratio:1.5;
+  background:
+    radial-gradient(circle 30px at top    left ,#0000 98%,var(--gradient)) top    left,
+    radial-gradient(circle 30px at top    right,#0000 98%,var(--gradient) ) top    right,
+    radial-gradient(circle 30px at bottom left ,#0000 98%,var(--gradient)) bottom left,
+    radial-gradient(circle 30px at bottom right,#0000 98%,var(--gradient)) bottom right;
+  background-size:51% 51%;
+  background-repeat:no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Name{
+  position: absolute;
+  font-size: 60px;
+  color: rgb(255, 240, 253);
+  padding: 0;
+  text-shadow: 1px 1px 30px rgb(170, 0, 255)
 }
