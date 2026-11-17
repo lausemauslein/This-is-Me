@@ -92,7 +92,7 @@
 }
 
 .main-body{
-  background: linear-gradient(var(--primary), var(--secondary)) ;
+  background: radial-gradient(var(--primary), var(--secondary)) ;
   font-family: "Capriola", sans-serif;
   font-size: 30px;
   padding: 10vh;
@@ -107,8 +107,14 @@
   font-size: 40px;
 }
 
-.Me1,.Me2{
+.Me1, .Me2{
   height: 65vh;
+  border-radius: 3%;
+}
+.Me{
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .PlaylistSongs{
@@ -128,7 +134,7 @@
   height: 30vh;
 }
 
-.Crochet, .designIMG, .Turtle {
+.card__header img {
   display: block;
   height: 30vh;
   border-radius: 50%;
@@ -157,7 +163,6 @@
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  overflow: hidden;
   border-radius: 16px;
   box-shadow: 0px 3px 18px 3px rgba(43, 43, 119, 0.2);
 }
@@ -177,6 +182,12 @@
 .card__face--back{
   background-color: var(--light);
   transform: rotateY(180deg);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.card__face--back::-webkit-scrollbar {
+  display: none;
 }
 
 .card__header, .card__header__Playlist{
@@ -288,11 +299,6 @@
   }
 }
 
-@media (min-width: 1900px){
-  .grid{
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
 
 
 .box {
