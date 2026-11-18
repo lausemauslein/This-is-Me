@@ -149,8 +149,6 @@
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
-  justify-content: center;
-  align-items: center;
 }
 
 .card__inner.is-flipped{
@@ -169,14 +167,16 @@
 
 .card__face--front{
   background: linear-gradient(to botttom right, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card__face--front h2 {
   color: black;
   font-size: 5vh;
-  text-align: center;
-  margin-top: 25vh;
   background-color: none;
+  text-align: center;
 }
 
 .card__face--back{
@@ -260,14 +260,15 @@
 }
 
 
-.US-UK,
-.Austria,
-.Sverige{
+.card__header .US-UK,
+.card__header .Austria,
+.card__header .Sverige{
   height: 25vh;
   padding: .5vh;
   border-radius: 0px 0px 40% 0px;
   position: absolute;
   z-index: 10;
+  border: none;
 }
 
 .Lang3Text{
@@ -299,8 +300,6 @@
   }
 }
 
-
-
 .box {
   width:50vh;
   aspect-ratio:1.5;
@@ -323,4 +322,38 @@
   color: rgb(255, 240, 253);
   padding: 0;
   text-shadow: 1px 1px 30px rgb(170, 0, 255)
+}
+
+h2{
+  padding: 1.2vh;
+}
+
+
+.card__header .Me2{
+  height: 65vh;
+  border-radius: 3%;
+  border: none;
+
+}
+
+.card__header__Me{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d3d3ff;
+  z-index: -1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.card__face--front__Me{
+  background-color: #d3d3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
